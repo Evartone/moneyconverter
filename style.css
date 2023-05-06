@@ -1,141 +1,145 @@
 
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: #f7f7f7;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 450px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper header {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1e1e1e;
+}
+
+form {
+  margin: 40px 0 20px 0;
+}
+
+form :where(input, select button) {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 14px;
+  background-color: #f7f7f7;
+  color: #1e1e1e;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+form input {
+  border: 1px solid #ccc;
+  height: 50px;
+}
+
+form input:focus {
+  border: 2px solid #675Afe;
+  background-color: #fff;
+}
+
+form p {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #1e1e1e;
+}
+
+.droplist {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.droplist select {
+  width: 100%;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  background-color: #f7f7f7;
+  color: #1e1e1e;
+}
+
+.fas {
+  cursor: pointer;
+  font-size: 24px;
+  margin-top: 30px;
+  color: #1e1e1e;
+  margin-left: -43px;
+}
+
+form .taxacambio {
+  font-size: 18px;
+  margin: 20px 0 30px;
+  font-weight: 600;
+  color: #1e1e1e;
+}
+
+form button {
+  height: 52px;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  background-color: #675Afe;
+  border-radius: 10px;
+  padding: 10px 30px;
+  transition: all 0.3s;
+}
+
+form button:hover {
+  background-color: #4c4c9f;
+}
+
+@media (max-width: 768px) {
   .wrapper {
-    width: 100%;
-    max-width: 450px;
-    padding: 30px;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    border-radius: 0px;
   }
-  
-  .wrapper header {
-    font-size: 36px;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 30px;
-    color: #1e1e1e;
-  }
-  
-  form {
-    margin: 40px 0 20px 0;
-  }
-  
+
   form :where(input, select button) {
-    width: 100%;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    padding: 14px;
-    background-color: #f7f7f7;
-    color: #1e1e1e;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    font-size: 16px;
+    padding: 12px;
   }
-  
-  form input {
-    border: 1px solid #ccc;
-    height: 50px;
-  }
-  
-  form input:focus {
-    border: 2px solid #675Afe;
-    background-color: #fff;
-  }
-  
+
   form p {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #1e1e1e;
-  }
-  
-  .droplist {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 20px;
-  }
-  
-  .droplist select {
-    width: 100%;
     font-size: 18px;
-    outline: none;
-    border: none;
-    background-color: #f7f7f7;
-    color: #1e1e1e;
   }
-  
+
   .fas {
-    cursor: pointer;
-    font-size: 24px;
-    margin-top: 30px;
-    color: #1e1e1e;
+    font-size: 20px;
+   
+    margin-left: -43px;
+    margin-top: 20px;
+    
   }
-  
+
   form .taxacambio {
-    font-size: 18px;
-    margin: 20px 0 30px;
-    font-weight: 600;
-    color: #1e1e1e;
+    font-size: 16px;
   }
-  
+
   form button {
-    height: 52px;
-    color: white;
-    cursor: pointer;
-    font-size: 18px;
-    background-color: #675Afe;
-    border-radius: 10px;
-    padding: 10px 30px;
-    transition: all 0.3s;
-  }
-  
-  form button:hover {
-    background-color: #4c4c9f;
-  }
-  
-  @media (max-width: 768px) {
-    .wrapper {
-      max-width: 100%;
-      border-radius: 0px;
-    }
-  
-    form :where(input, select button) {
-      font-size: 16px;
-      padding: 12px;
-    }
-  
-    form p {
-      font-size: 18px;
-    }
-  
-    .fas {
-      font-size: 20px;
-    }
-  
-    form .taxacambio {
-      font-size: 16px;
-    }
-  
-    form button {
-      font-size: 16px;
-      padding: 10px 20px;
-    }}  
+    font-size: 16px;
+    padding: 10px 20px;
+  }}   
 
 
 
